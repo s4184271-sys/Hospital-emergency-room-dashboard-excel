@@ -1,48 +1,66 @@
-# Hospital Emergency Room Dashboard (Excel | Power Query · Power Pivot · DAX)
+# Hospital Emergency Room Dashboard — Excel
 
-An Excel-based BI dashboard analyzing ~9,200 ER patient admission records to surface trends in patient volume, wait times, and satisfaction scores — built to simulate a real hospital operations reporting tool.
+An Excel-based hospital operations dashboard analyzing approximately **9,200 emergency-room admission records** to understand patient volume, waiting time, satisfaction, and department-level performance.
 
-##  Overview
+## Business Questions
 
-This project takes raw, messy ER admission data and turns it into an interactive, decision-ready dashboard using Excel's Power Query, Power Pivot, and DAX toolchain — no external BI tool required.
+- How many patients are being admitted?
+- What is the average ER waiting time?
+- What is the average patient satisfaction score?
+- How does patient volume change over time?
+- Which department referrals receive higher patient volumes?
+- Where may operational bottlenecks be occurring?
+- How do waiting time and satisfaction vary across filters such as department and gender?
 
-##  Dataset
+## Solution
 
-- ~9,200 rows of patient-level ER admission records
-- Fields: Patient ID, Admission Date, Name, Gender, Age, Race, Department Referral, Admission Flag, Satisfaction Score, Wait Time
+The project follows an end-to-end Excel BI workflow.
 
-##  What's Inside
+### 1. Data Transformation — Power Query
 
-**Data Transformation (Power Query)**
-- Corrected inconsistent data types across date and numeric fields
-- Merged and split columns to standardize patient identifiers and timestamps
-- Cleaned nulls and formatting issues prior to modeling
+- Corrected inconsistent data types
+- Cleaned null and formatting issues
+- Merged and split columns where required
+- Standardized patient identifiers and timestamps
 
-**Data Modeling (Power Pivot)**
-- Loaded the cleaned dataset into Power Pivot
-- Structured calculated columns to support department- and time-based reporting
+### 2. Data Modeling — Power Pivot
 
-**DAX Measures**
-- Conditional logic (`IF` / `IFS`) to flag long wait times and segment satisfaction scores into performance bands
+- Loaded the cleaned data into the Data Model
+- Structured calculated columns for reporting
+- Prepared the model for dashboard analysis
 
-**Dashboard**
-- KPI cards: daily ER volume, average wait time, average satisfaction score
-- Bar and line charts for admission trends and department-level performance
-- Slicers for interactive filtering by department, gender, and date
+### 3. Analysis — DAX
 
-##  Goal
+Used conditional logic such as `IF` and `IFS` to flag long waiting times and segment satisfaction scores into performance bands.
 
-Give a hospital ops manager a quick, at-a-glance view of where bottlenecks are forming — e.g., departments with longer wait times or lower satisfaction — without needing to dig through raw data.
+### 4. Dashboard
 
-##  Next Steps
+The dashboard contains:
+- KPI cards for ER volume, average wait time, and average satisfaction
+- Admission trend charts
+- Department-level comparisons
+- Interactive slicers for department, gender, and date
 
-- Add DAX time intelligence measures (YTD, period-over-period comparisons)
-- Expand data model with relationships across additional dimension tables
+## Dataset
 
-##  Acknowledgements
+Approximately **9,200 patient-level ER admission records** with fields including Patient ID, Admission Date, Name, Gender, Age, Race, Department Referral, Admission Flag, Satisfaction Score, and Wait Time.
 
-Learned Power Query, Power Pivot, and DAX fundamentals from Satish Dhawale's YouTube tutorials.
+## Goal
 
-## Feedback
+The dashboard is designed as a hospital operations reporting tool, helping users identify trends and areas that may require further investigation without manually reviewing raw records.
 
-Open to feedback from anyone working in BI/analytics — particularly on the data model structure and DAX measures. Feel free to open an issue or reach out.
+## Current Scope
+
+The project focuses on Power Query, Power Pivot, DAX fundamentals, and interactive reporting.
+
+Planned extensions include:
+- DAX time-intelligence measures such as YTD and period-over-period comparisons
+- Additional dimension tables and relationships
+
+## Tools
+
+**Microsoft Excel · Power Query · Power Pivot · DAX**
+
+## Acknowledgement
+
+Power Query, Power Pivot, and DAX concepts were learned through Satish Dhawale's tutorials.
